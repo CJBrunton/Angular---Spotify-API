@@ -1,0 +1,60 @@
+<div>
+     <ul class="list-group">
+       <li class="list-group-item" ng-click="getAlbum(artist.id,artist.name)" ng-class="{Highlight: hover}" ng-mouseenter="hover = true"  ng-mouseleave="hover = false" ng-repeat="artist in artistsReturned">
+  
+        
+         <br>
+         
+        <div class="panel panel-default">
+        <div class="panel-heading">
+        <b> {{artist.name}} </b>
+        </div>
+        
+        <br>
+        <div class="container">
+    <div class="row">
+      <div class="col-sm-5">
+        <center><img ng-show="{{artist.images[0].url}}" ng-src="{{artist.images[0].url}}" height="300" width ="300"/></center>
+        <br>
+      </div>
+      <div class="col-sm-7">
+        <div class="well">
+          <dl class="dl-horizontal">
+            <dt ng-show="artist.genres[0]">Genres:</dt>
+            <dd ng-show="artist.genres">{{artist.genres[0]}}</dd>
+
+            <dt ng-show="artist.followers">Followers:</dt>
+            <dd ng-show="artist.followers">{{artist.followers.total  | number}}</dd>
+
+            <dt ng-show="artist.popularity">Popularity:</dt>
+            <dd ng-show="artist.popularity">
+              {{artist.popularity}}/100
+                
+            </dd>
+
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4" style="background-color:lavender;"><a>View Albums</a></div>
+  </div>
+</div>
+
+    
+         
+          
+         
+          
+          
+        </div>
+          
+        
+       </li>
+     </ul>
+</div>       
+
+<a href="#/index">Clear the results</a>

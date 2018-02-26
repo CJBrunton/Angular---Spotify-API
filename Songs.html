@@ -1,0 +1,13 @@
+<div class="panel panel-default">
+<div class="panel-body">
+<h1>Songs</h1>
+</div>
+</div>
+<div>
+  <ul >
+    <li id="music-button" ng-class="{Highlight: hover}" ng-mouseenter="hover = true"  ng-mouseleave="hover = false" class="list-group-item" ng-repeat="songs in songsReturned"> 
+      {{songs.name}} <button class="btn btn-link" ng-click="playSong(songs.id)">Play</button>  <button class="btn btn-link" ng-click="pauseSong(songs.id)">Pause</button>
+    </li>
+    
+  </ul>
+</div>

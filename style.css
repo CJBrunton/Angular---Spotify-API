@@ -1,0 +1,18 @@
+/* Styles go here */
+
+.Highlight
+{
+  background-color:#F0FFFF;
+  cursor:pointer;
+}
+.cover {
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    background-size: cover;
+}
+
+.cover:hover {
+    cursor: pointer;
+}
+

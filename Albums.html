@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+        <div class="panel-body">
+<h1>{{chosenArtist}} Albums </h1>
+</div>
+</div>
+<div class="col-sm-4" ng-repeat="albums in albumsReturned">
+ 
+    <div class="row">
+      <div >
+     <b>{{albums.name}}</b> 
+     <br>
+      <img ng-show=" {{albums.images[0].url}}" ng-src=" {{albums.images[0].url}}" class="cover list-group-item" ng-click="songs(albums.id)">
+  </div>
+  </div>
+</div>
+
+
+<script id="results-template" type="text/x-handlebars-template">
+    {{#each albums.items}}
+    <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
+    {{/each}}
+</script>
+
+<a href="#/index">Clear the results</a>
